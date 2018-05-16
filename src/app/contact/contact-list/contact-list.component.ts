@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Contact} from '../contact';
+import {ContactService} from '../contact.service';
 
 @Component({
   selector: 'cw-contact-list',
@@ -10,15 +11,12 @@ export class ContactListComponent implements OnInit {
 
   contacts: Contact[];
 
-  constructor() {
+  constructor(private contactService: ContactService) {
     this.contacts = [];
   }
 
   ngOnInit() {
-    this.contacts.push(new Contact('Sami', 'Luukkanen'));
-    this.contacts.push(new Contact('Pertti', 'Jokunen'));
-    this.contacts.push(new Contact('Seppo', 'Taalasmaa'));
-    console.log(this.contacts);
+    this.contacts = this.contactService.getContacts();
   }
 
 }
