@@ -1,8 +1,21 @@
 <mat-sidenav-container class="cw-sidenav-container">
-  <mat-sidenav #sidenav aling="start" [mode]="'over'" [opened]="false">
+  <mat-sidenav #sidenav aling="start" [mode]="'over'" [opened]="false" class="cw-sidenav">
 
     <!-- Sidenav content -->
-    <span>Sidenav content</span>
+    <div>
+      <div fxLayout="column" fxLayoutAlign="center center" class="cw-sidenav-user-area">
+        <div>
+          <mat-icon class="cw-sidenav-avatar" color="accent">account_circle</mat-icon>
+        </div>
+        <div>
+          <span>Johtajan webbi</span>
+        </div>
+
+      </div>
+      <div>
+        <span>Sidenav content</span>
+      </div>
+    </div>
   </mat-sidenav>
   <div>
     <!-- App content -->
