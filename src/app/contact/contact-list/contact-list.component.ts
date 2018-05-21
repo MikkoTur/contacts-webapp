@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Contact} from '../contact';
 import {ContactService} from '../services/contact.service';
 import {Router} from '@angular/router';
+import {ToolbarOptions} from '../../ui/toolbar/toolbar-options';
 
 @Component({
   selector: 'cw-contact-list',
@@ -17,6 +18,7 @@ export class ContactListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.toolbar.toolbarOptions.next(new ToolbarOptions('Contact', []));
     this.contactService.getContacts().subscribe(response => {
       this.contacts = response;
       console.log(this.contacts);

@@ -20,13 +20,14 @@
 
   <div fxFlexFill class="cw-sidenav-content">
     <!-- App content -->
-    <mat-toolbar color="primary">
-      <!-- Toolbar -->
+<!--    <mat-toolbar color="primary">
+      &lt;!&ndash; Toolbar &ndash;&gt;
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon class="mat-18">menu</mat-icon>
       </button>
       <span>Contact application</span>
-    </mat-toolbar>
+    </mat-toolbar>-->
+    <cw-toolbar (onMenuClick)="sidenav.toggle()"></cw-toolbar>
     <div class="cw-app-container">
       <!-- App -->
       <router-outlet></router-outlet>
