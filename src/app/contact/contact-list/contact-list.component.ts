@@ -24,8 +24,12 @@ export class ContactListComponent implements OnInit {
   }
 
   onContactSelect(contact): void {
-   // console.log(contact.id);
+    // console.log(contact.id);
     this.router.navigate(['/contacts', contact.id]);
+  }
+
+  onCreateNew(): void {
+    this.router.navigate(['/contacts/new']);
   }
 
 }
