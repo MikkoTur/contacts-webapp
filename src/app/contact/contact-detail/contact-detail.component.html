@@ -45,7 +45,13 @@
                placeholder="Street address"
                [readonly]="!editingEnabled">
       </mat-form-field>
-
+      <mat-form-field floatPlaceholder="auto">
+        <input matInput [(ngModel)]="contact.postalCode"
+               type="text"
+               required
+               placeholder="Postalcode"
+               [readonly]="!editingEnabled">
+      </mat-form-field>
       <mat-form-field floatPlaceholder="auto">
         <input matInput [(ngModel)]="contact.city"
                type="text"
