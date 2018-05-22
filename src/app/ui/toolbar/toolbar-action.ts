@@ -6,4 +6,7 @@ export class ToolbarAction {
     this.action = action;
     this.icon = icon;
   }
+  runAction(): void {
+    this.action();
+  }
 }
