@@ -10,10 +10,14 @@
         <div>
           <span>Johtajan webbi</span>
         </div>
-
+      <mat-divider></mat-divider>
       </div>
       <div>
-        <span>Sidenav content</span>
+        <mat-nav-list>
+          <mat-list-item>
+            <a routerLink="login" (click)="sidenav.toggle()">Sign out</a>
+          </mat-list-item>
+        </mat-nav-list>
       </div>
     </div>
   </mat-sidenav>
