@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpointUrl: 'http://mtcontactswebapi.azurewebsites.net'
+  apiEndpointUrl: 'https://mtcontactswebapi.azurewebsites.net'
 };
 
 /*
